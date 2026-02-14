@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { addUser, getUsers } = require("../controllers/userController");
+const { addUser, getUsers , deleterow } = require("../controllers/userController");
 
 
 router.get("/test", (req, res) => {
@@ -10,5 +10,7 @@ router.get("/test", (req, res) => {
   
 router.post("/user", addUser);
 router.get("/users", getUsers);
+
+router.delete("/deleterow",deleterow);
 
 module.exports = router;

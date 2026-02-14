@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Card container */
+        #container {
+            width: 35%;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Each row */
+        .form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        /* Labels */
+        label {
+            width: 30%;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* Inputs */
+       input{
+         width: 65%;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+       }
+
+        /* Button */
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="container">
+    <h2>PROFILE CARD</h2>
+
+    <form action="usercard" id="usercard">
+
+        <div class="form">
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form">
+            <label for="email">Email id :</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email id" required>
+        </div>
+
+        <div class="form">
+            <label for="age">Age :</label>
+            <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter your age" required>
+        </div>
+
+        <div class="form">
+            <label for="city">City :</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>

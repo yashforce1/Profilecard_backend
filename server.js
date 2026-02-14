@@ -6,9 +6,15 @@ app.use(express.json());
 
 const userRoutes = require("./routes/userRoutes");
 
+
+// practice
 app.get("/", (req, res) => {
   res.status(200).send("Server is running 🚀");
 });
+
+
+
+
 
 app.use("/", userRoutes);
 
