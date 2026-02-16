@@ -39,5 +39,44 @@
     </form>
 </div>
 
+<script>
+    const data = document.getElementById('usercard');
+    data.addEventListener("submit",async(e)=>{
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const age = document.getElementById("age").value;
+        const city = document.getElementById("city").value;
+
+
+        try{
+            const response  = await fetch("http://localhost:3000/user" , {
+                method : "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body :JSON.stringify({name ,email,age,city})
+            })
+
+            const result = await response.json();
+            console.log(result);
+
+            alert("user saved successfully");
+
+            
+            data.reset();
+        }
+        catch(err){
+            console.error(err);
+            alert("Error saving the user");
+        }
+
+
+
+    })
+
+
+</script>
 </body>
 </html>
